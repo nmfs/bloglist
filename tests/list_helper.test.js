@@ -32,3 +32,23 @@ describe('total likes', () => {
     expect(listHelper.totalLikes([{likes: 1}, {likes: 2}])).toBe(3)
   })
 })
+
+describe('favorite blog', () => {
+  const blog = [
+    {
+      _id: '1',
+      likes: 4,
+    },
+    {
+      _id: '2',
+      likes: 5,
+    }
+  ]
+  test('of two blogs is the one with most likes', () => {
+    const result = listHelper.favoriteBlog(blog)
+    expect(result).toEqual({
+      _id: '2',
+      likes: 5
+    })
+  })
+})
