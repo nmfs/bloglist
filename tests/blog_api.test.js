@@ -64,8 +64,7 @@ test('a blog is posted', async () => {
   const newBlog = {
     title: "Hey",
     author: "Jay",
-    url: "http..vv",
-    likes: 20
+    url: "http..vv"
   }
   await api
     .post('/api/blogs')
